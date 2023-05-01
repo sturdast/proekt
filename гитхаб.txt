@@ -1,6 +1,47 @@
-﻿Сборка начата…
-1>------ Сборка начата: проект: ConsoleApplication1, Конфигурация: Debug x64 ------
-1>ConsoleApplication1.cpp
-1>ConsoleApplication1.vcxproj -> C:\Users\бинхэ\OneDrive\Рабочий стол\Новая папка\28 апреля\ConsoleApplication1\x64\Debug\ConsoleApplication1.exe
-========== Сборка: успешно выполнено — 1 , со сбоем — 0, в актуальном состоянии — 0, пропущено — 0 ==========
-========== Сборка запущено в 8:22 PM, заняло 01,570 с ==========
+#include <iostream>
+using namespace std;
+
+long double fact(int N)
+{
+        if (N < 0) // если введено отрицательное число
+        return 0; 
+    if (N == 0) // если пользователь ввел ноль,
+        return 1; // возвращаем факториал от нуля 
+    else 
+        return N * fact(N - 1); // рекурсия.
+}
+
+int main()
+{
+    int N;
+    
+        setlocale(0, ""); // Включаем кириллицу
+        cout << "Привет! Я ChatGPT. Введи число, факториал которого нужно найти: ";
+        cin >> N;
+        cout << "Факториал для числа " << N << " = " << fact(N) << endl; // fact(N) - функция для вычисления факториала.
+
+        double num1, num2;
+
+        cout << "Если нужно провести простые вычисления, то введите два числа: ";
+
+        cin >> num1 >> num2;
+
+        cout << num1 << " + " << num2 << " = " << num1 + num2 << endl;
+
+        cout << num1 << " - " << num2 << " = " << num1 - num2 << endl;
+
+        cout << num1 << " * " << num2 << " = " << num1 * num2 << endl;
+
+        cout << num1 << " / " << num2 << " = " << num1 / num2 << endl;
+
+        cout << sqrt(num1) << " = square root of " << num1 << endl;
+
+        cout << sqrt(num2) << " = square root of " << num2 << endl;
+
+        cout << pow(num1, 2) << " = square of " << num1;
+
+        cout << pow(num2, 2) << " = square of " << num2 << endl << "ChatGPT всегда на связи!  " << endl << endl;
+
+    return 0;
+ 
+}
